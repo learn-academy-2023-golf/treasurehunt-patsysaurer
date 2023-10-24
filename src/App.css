@@ -17,3 +17,9 @@ h1 {
   width: 620px;
   margin: auto;
 }
+
+button {
+  margin: auto; 
+  text-align: center;
+  margin-top: 20px;
+}
