@@ -49,28 +49,58 @@ As a developer, you are tasked with creating a treasure hunt game. The user will
 
 ### 📚 User Stories
 
-- As a user, I can see a page with a three by three grid board game with a question mark in each square.
-    // - create new branch:
-    // - create a grid
-        // make a div = 
-    // - add question marks
-
+-  ✅ As a user, I can see a page with a three by three grid board game with a question mark in each square.
+    // - Terminal ~ git checkout -b grid
+    // - App.js 
+        1. Create a div to contain the game board 
+        2. Give it a className of "gameboard"
+        3. Add JS inside the div
+            - map through the board array from the state variable
+            - return the Square component to use it as each element in the board array
+                - pass in props (value, index, key, handleGamePlayFunction)
+    // - App.css
+        1. Create a new style object for .gameboard to display the grid
+        2. Add styling:
+            - display flex 
+            - flex-wrap: wrap  
+            - set a width 
+            - center the board
+   
 - As a user, when I click on one of the question marks, an alert appears with the index position of that question mark in the array.
-    // - create a new branch: alert-index
-
+    // - Terminal ~ git checkout -b alert-index
+    // - Square.js
+        1. Return a click handler 
 
 - As a user, when I click on one of the question marks, a tree emoji appears instead of the alert.
+    // - Terminal ~ git checkout -b tree-emoji
+
 - As a user, if I select the winning square, the question mark will become a treasure emoji. If I select the losing square, the question mark will become a bomb emoji.
+    // - Terminal ~ git checkout -b winner-loser
+
 - As a user, I can click on a “Play Again” button that will restart the game.
+    // - Terminal ~ git checkout -b play-again
+
 - As a user, I can see a counter that shows how many guesses are remaining. The counter starts at five and decrements by one every time I click on a square that is neither the treasure nor the bomb.
+    // - Terminal ~ git checkout -b counter
+
 - As a user, I can see a message stating that I won the game by selecting the square that contains the treasure.
+    // - Terminal ~ git checkout -b win-game
+
+
 - As a user, I can see a message stating that I lost the game by selecting the square that contains the bomb.
+    // - Terminal ~ git checkout -b loose-game
+
 - As a user, I cannot continue to play the game after I win or lose.
+    // - Terminal ~ git checkout -b game-over
+
 - As a user, I can see a message informing me that I lost the game when I run out of turns (the counter reaches zero).
+    // - Terminal ~ git checkout -b zero-turns-left
+
 
 ### 🏔 Stretch Goals
 
 - Consider how to handle a situation where the bomb and the treasure are at the same index.
+    // - Terminal ~ git checkout -b same-index
 
 ### 👩‍💻 Developer Stretch Goals
 
