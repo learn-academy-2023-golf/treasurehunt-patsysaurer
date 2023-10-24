@@ -15,6 +15,12 @@ const App = () => {
     "?"
   ])
 
+  // handles all of the game play the user does
+  const handleGamePlay = (index) => {
+      // let us know what index we are clicking on
+    alert(index)
+  }
+
   return (
     <>
       <h1>Treasure Hunt Game</h1>
@@ -24,6 +30,8 @@ const App = () => {
             <Square 
            value={value}
            key={index}
+           index={index}
+           handleGamePlay={handleGamePlay}
            />
           )
         })}
