@@ -15,6 +15,16 @@ const App = () => {
     "?"
   ])
 
+  const [treasureLocation, 
+  setTreasureLocation] = useState(Math.floor(Math.random() * board.length))
+
+  const [bombLocation, 
+    setBombLocation] = useState(Math.floor(Math.random() * board.length))
+
+    console.log("treasure", treasureLocation)
+    console.log("bomb", bombLocation)
+
+
   // handles all of the game play the user does
   const handleGamePlay = (index) => {
       // let us know what index we are clicking on
@@ -22,9 +32,24 @@ const App = () => {
 
     // variable that makes a copy of state "board" variable
     let updatedBoard = [...board] 
-    // update a single instance (the one that gets clicked on)
-    updatedBoard[index] = "🧁"
-    setBoard(updatedBoard)
+
+    // evaluate whether treasureLocation is the same as the location 
+      // that the user clicked, if so update the value with a treasure emoji
+      
+      if(treasureLocation === index){
+        updatedBoard[index] = "💎"
+        setBoard(updatedBoard)
+      } // check the bomb location
+      else if(bombLocation === index){
+        updatedBoard[index] = "🍫"
+        setBoard(updatedBoard)
+      } else {
+        // update a single instance (the one that gets clicked on)
+        updatedBoard[index] = "🧁"
+        setBoard(updatedBoard)
+      }
+
+
   }
 
   return (
