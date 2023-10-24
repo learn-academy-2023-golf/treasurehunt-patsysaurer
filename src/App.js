@@ -18,7 +18,13 @@ const App = () => {
   // handles all of the game play the user does
   const handleGamePlay = (index) => {
       // let us know what index we are clicking on
-    alert(index)
+    // alert(index)
+
+    // variable that makes a copy of state "board" variable
+    let updatedBoard = [...board] 
+    // update a single instance (the one that gets clicked on)
+    updatedBoard[index] = "🧁"
+    setBoard(updatedBoard)
   }
 
   return (
