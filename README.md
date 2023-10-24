@@ -79,6 +79,9 @@ As a developer, you are tasked with creating a treasure hunt game. The user will
 
 - As a user, I can click on a “Play Again” button that will restart the game.
     // - Terminal ~ git checkout -b play-again
+       // - components/ create a new file: Restart.js
+        // - add a function that returns a restart button 
+        // 
 
 - As a user, I can see a counter that shows how many guesses are remaining. The counter starts at five and decrements by one every time I click on a square that is neither the treasure nor the bomb.
     // - Terminal ~ git checkout -b counter

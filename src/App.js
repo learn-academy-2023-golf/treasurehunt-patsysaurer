@@ -2,6 +2,7 @@ import React, { useState } from "react"
 import Square from './components/Square'
 import "./App.css"
 
+
 const App = () => {
   const [board, setBoard] = useState([
     "?",
@@ -14,6 +15,10 @@ const App = () => {
     "?",
     "?"
   ])
+
+  const restartGame = () => {
+    setBoard(board)
+  }
 
   const [treasureLocation, 
   setTreasureLocation] = useState(Math.floor(Math.random() * board.length))
@@ -66,6 +71,7 @@ const App = () => {
            />
           )
         })}
+        <button onClick={restartGame}> 🔄 Play Again</button>
       </div>
     </>
   )
